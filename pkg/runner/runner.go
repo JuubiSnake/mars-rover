@@ -32,24 +32,37 @@ type manager struct {
 // Lines for the instruction-set must be delimited by '\n' and contain
 // at least three lines in the following format:
 //
+//
 // 5 5 <-- Line 0: This constructs a 2D surface.
+//
 // 1 1 N <-- Line 1: This constructs and places a robot on the surface.
+//
 // LMLLMLM <-- Line 2: This moves the robot along the surface.
+//
 //
 // The input can repeat the instructions outlined on line 1 and 2 in order
 // to place more robots on the surface, for example:
 //
+//
 // 5 5
+//
 // 1 1 N
+//
 // LMLMLM
+//
 // 2 2 S
+//
 // LLLLLL
+//
 //
 // Run will return the results of robots final resting positions in the following
 // format:
 //
+//
 // 2 2 E
+//
 // 1 1 N
+//
 //
 // Note that output is delimited by '\n' and the number of lines is equal to
 // the number of robots constructed.
@@ -57,11 +70,17 @@ type manager struct {
 // If an error occurs, Run will return the resting places of ALL robots that
 // have successfully moved across the surface AND the error, for example:
 //
+//
 // 5 5
+//
 // 1 1 N
+//
 // L
+//
 // 1 1 N
+//
 // MMMMMMM
+//
 //
 // Will return a string "1 1 W" and an out-of-bounds error.
 func Run(input string) (string, error) {

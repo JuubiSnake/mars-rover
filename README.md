@@ -1,4 +1,6 @@
 # Mars Rover
+[![Go Report Card](https://goreportcard.com/badge/github.com/juubisnake/mars-rover)](https://goreportcard.com/report/github.com/juubisnake/mars-rover)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/juubisnake/mars-rover)](https://pkg.go.dev/github.com/juubisnake/mars-rover)
 
 A simple golang runner that allows you to simulate the movement of a series of robots against a plateau/surface via a instruction-set.
 
@@ -83,6 +85,7 @@ MMMMMRMMMMM
 		log.Fatalf("failed while running instructions: %v", err)
 	}
 	fmt.Println(result)
+}
 ```
 
 You can find more examples within the [main file](./cmd/mars-rover/main.go).
