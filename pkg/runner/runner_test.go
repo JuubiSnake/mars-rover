@@ -318,7 +318,7 @@ LMLMRM
 `
 	_, err := Run(input)
 	if err == nil {
-		t.Fatal("Run() should have failed with a invalid movment")
+		t.Fatal("Run() should have failed with a invalid movement")
 	}
 	pe, ok := err.(*ParseRobotMovementError)
 	if !ok {
