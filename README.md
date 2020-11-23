@@ -5,7 +5,7 @@ A simple golang runner that allows you to simulate the movement of a series of r
 ## Requirements
 
 You will need:
-- [`Golang` 1.15+]()
+- [`Golang` 1.15+](https://golang.org/doc/install)
 
 ## Overview
 
@@ -25,7 +25,7 @@ The possible letters are 'L', 'R' and 'M'. 'L' and 'R' makes the rover spin 90 d
 
 Assume that the square directly North from (x, y) is (x, y+1).
 
-## Instruction Structure
+## Instruction Format
 
 The first line of input is the upper-right coordinates of the plateau, the lower-left coordinates are assumed to be 0,0.
 
