@@ -29,6 +29,10 @@ Assume that the square directly North from (x, y) is (x, y+1).
 
 ## Instruction Format
 
+The following outlines the format of the instructions that are fed into the simulator.
+
+### Input
+
 The first line of input is the upper-right coordinates of the plateau, the lower-left coordinates are assumed to be 0,0.
 
 The rest of the input is information pertaining to the rovers that have been deployed. Each rover has two lines of input.
@@ -60,7 +64,21 @@ However if there is whitespace between instructions within the instruction-set t
 1  2 N
 L  MLM MLM
 ```
+### Output
 
+The output to the instruction-set are the final resting positions of the robots that have traversed the surface, for example:
+```
+5 5
+1 2 N
+LMLMLMLMM
+3 3 E
+MMRMMRMRRM
+```
+Will render the output:
+```
+1 3 N
+5 1 E
+```
 ## Usage
 
 In order to run an instruction-set against the `mars-rover` package, you must use the `Run()` function within the `runner` package; for example:
@@ -94,6 +112,10 @@ If you wish to run these examples, simply run the following:
 ```shell
 $ go run ./cmd/mars-rover/main.go
 ```
+Note that within one of these examples you can still output the resting positions of the robots that have successfully navigated the surface prior to one who fails with an error.
+
+_It is up to you_ to decide how to handle these events; the error is still thrown in _all_ cases a failure takes place, so ensure you use it.
+
 ## Tests
 
 This package comes a fleet of tests designed to ensure that simulator works with as much confidence as possible.

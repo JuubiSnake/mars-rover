@@ -12,8 +12,8 @@ func main() {
 	// a typical example of running a single robot across a surface.
 	instructions := `
 5 5
-0 0 N
-MMMMMRMMMMM
+1 2 N
+LMLMLMLMM
 `
 	result, err := runner.Run(instructions)
 	if err != nil {
@@ -24,10 +24,10 @@ MMMMMRMMMMM
 	// a example of running a multiple rovers across a surface.
 	instructions = `
 5 5
-0 0 N
-MMMMMRMMMMM
-0 0 N
-MMMMMRMMMMM
+1 2 N
+LMLMLMLMM
+3 3 E
+MMRMMRMRRM
 `
 	result, err = runner.Run(instructions)
 	if err != nil {
@@ -39,10 +39,10 @@ MMMMMRMMMMM
 	// the second rover fails.
 	instructions = `
 5 5
-0 0 N
-MMMMMRMMMMM
-5 5 N
-MMMMM
+1 2 N
+LMLMLMLMM
+3 3 E
+MMRMMRMRRMMMMMMMMMM
 `
 	result, err = runner.Run(instructions)
 	if err == nil {
